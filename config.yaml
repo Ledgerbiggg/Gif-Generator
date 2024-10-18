@@ -1,0 +1,41 @@
+mod: dev
+
+logLevel: 1
+
+# Configuration for GIF generation
+output:
+  # Name of the output GIF file
+  gifName: "output.gif"
+
+# Image processing settings
+image:
+  # The width and height for the output GIF
+  width: 800
+  height: 600
+
+  # The list of input images to be used for GIF creation, each with its own delay
+  imageList:
+    - file: "1.jpg"
+      delay: 100
+    - file: "2.jpg"
+      delay: 200
+    - file: "3.jpg"
+      delay: 150
+    - file: "4.jpg"
+      delay: 100
+
+# GIF settings
+gifSettings:
+  # Looping (0 = infinite loop)
+  loop: 0
+
+  # Quality of the GIF (lower means better quality but larger file size)
+  quality: 80
+
+# Optional settings for additional features
+options:
+  # Enable or disable dithering for GIF creation (helps with color reduction)
+  dither: true
+
+  # Set to true if images should be resized to fit the GIF dimensions
+  resizeImages: true
